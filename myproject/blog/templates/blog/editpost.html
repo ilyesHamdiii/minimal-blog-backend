@@ -1,0 +1,12 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+
+<form method="POST">
+
+  {% csrf_token %}
+  <input type="text" name="title"  class="text" value="{{ post.title }}" required>
+  <textarea name="content" class="text text1 ">{{ post.content }}</textarea>
+  <button type="submit" class='btn'>Update Post</button>
+</form>
